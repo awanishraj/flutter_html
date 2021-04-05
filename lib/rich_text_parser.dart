@@ -401,7 +401,8 @@ class HtmlRichTextParser extends StatelessWidget {
       // need to honor the indent and styling specified by that block style.
       // e.g. ol, ul, blockquote
       bool treatLikeBlock =
-          ['blockquote', 'ul', 'ol'].indexOf(parseContext.blockType!) != -1;
+          <dynamic>['blockquote', 'ul', 'ol'].indexOf(parseContext.blockType) !=
+              -1;
 
       // if there is no parentElement, contain the span in a BlockText
       if (parseContext.parentElement == null) {
